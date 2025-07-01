@@ -1,0 +1,75 @@
+# Ignorar arquivos de cache e diretórios de build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info/
+.installed.cfg
+*.manifest
+*.spec
+
+*debug_js.py
+*debug_resultados.py
+*explorar_campos.py
+# Ignorar ambientes virtuais
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignorar IDEs e editores
+# PyCharm
+.idea/
+.vscode/
+
+# IPython Notebook
+.ipynb_checkpoints
+
+# MyPy
+.mypy_cache/
+
+# Arquivos de log e banco de dados
+*.log
+*.sqlite3
+*.db
+
+# Variáveis de ambiente
+.env
+.flaskenv
+
+# Testes
+.pytest_cache/
+
+# Documentação
+docs/_build/
+
+# Docker
+Dockerfile.bak
+docker-compose.bak
+
+# Dados
+data/
+*.csv
+*.json
+*.xlsx
+*.xls
+*.sqlite
+
+# Outros
+*.bak
+*.swp
+*~
