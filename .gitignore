@@ -16,6 +16,11 @@ eggs/
 *debug_js.py
 *debug_resultados.py
 *explorar_campos.py
+*test_*.py
+*verificar_setup.py
+
+# Ignorar arquivos de publicaçao
+cache_pdfs/
 # Ignorar ambientes virtuais
 .venv/
 env/
