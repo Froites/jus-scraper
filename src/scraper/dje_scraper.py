@@ -1,15 +1,6 @@
-# src/scraper/dje_scraper.py - Versão com imports corrigidos
-#!/usr/bin/env python3
-"""
-DJE Scraper - Versão Otimizada e Performática
-Foco na estabilidade da extração sequencial
-"""
-
 import time
 import os
 from typing import List
-import json
-from datetime import datetime
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -18,11 +9,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# Imports locais
+# Imports locais (relativos à pasta src)
 from extraction.data_extractor import DataExtractor
 from scraper.frame_handler import FrameHandler
 from scraper.cache_manager import CacheManager
 from models.publicacao import Publicacao
+
 
 # Configurações
 DJE_BASE_URL = 'https://dje.tjsp.jus.br/cdje/index.do'
@@ -102,7 +94,6 @@ class DJEScraperOtimizado:
         print("✅ Busca executada")
 
     def _encontrar_links(self) -> List:
-        """Busca direta por links com title='Visualizar'"""
         print("🔍 Buscando links...")
         
         links = self.driver.find_elements(By.XPATH, "//a[@title='Visualizar']")
@@ -110,7 +101,6 @@ class DJEScraperOtimizado:
         return links
 
     def _processar_link(self, link, index: int) -> Publicacao:
-        """Processamento otimizado de um link"""
         print(f"\n📄 Processando link {index + 1}...")
         
         text = link.text.strip()
@@ -168,7 +158,6 @@ class DJEScraperOtimizado:
                 
             except Exception as e:
                 print(f"      ❌ Erro ao processar link: {e}")
-                # Garantir que voltamos à janela original
                 try:
                     self.driver.switch_to.window(original_window)
                 except:

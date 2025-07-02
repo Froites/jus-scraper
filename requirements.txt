@@ -1,6 +1,5 @@
 # DJE Scraper - Dependências do Projeto
 
-# Selenium para automação web (versão compatível)
 selenium>=4.15.2,<5.0.0
 webdriver-manager>=4.0.1,<5.0.0
 
@@ -13,13 +12,12 @@ requests>=2.31.0,<3.0.0
 # Variáveis de ambiente
 python-dotenv>=1.0.0,<2.0.0
 
-# Opcional: Para desenvolvimento e testes
 pytest>=7.4.3
 pytest-cov>=4.1.0
 
 # Opcional: Formatação de código
 black>=23.10.1
-flake8>=6.1.0# DJE Scraper - Dependências do Projeto
+flake8>=6.1.0
 
 # Selenium para automação web
 selenium==4.15.2
@@ -34,13 +32,11 @@ requests==2.31.0
 # Utilitários
 python-dotenv==1.0.0
 
-# Opcional: Para melhor performance
+
 lxml==4.9.3
 
-# Desenvolvimento e testes (opcional)
 pytest==7.4.3
 pytest-cov==4.1.0
 
-# Formatação de código (opcional)
 black==23.10.1
 flake8==6.1.0
