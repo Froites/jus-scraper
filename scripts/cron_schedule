@@ -1,0 +1,4 @@
+# Cron job to run daily_scrape.sh every day at 1 AM
+# m h dom mon dow user command
+0 1 * * * root /bin/bash /app/scripts/daily_scrape.sh
+# End of cron job
